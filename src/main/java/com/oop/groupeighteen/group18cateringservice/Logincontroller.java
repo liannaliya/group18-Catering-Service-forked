@@ -18,11 +18,12 @@ public class Logincontroller
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void changepassButton(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void createaccountButton(ActionEvent actionEvent) {
     }
 }
