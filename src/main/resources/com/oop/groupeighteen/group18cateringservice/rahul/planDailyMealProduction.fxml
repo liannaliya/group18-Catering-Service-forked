@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.rahul.PlanDailyMealProductioncontroller">
+   <children>
+      <DatePicker fx:id="plandailymealDP" layoutX="74.0" layoutY="41.0" onAction="#plandailymealOnActionDP" />
+      <ComboBox fx:id="airlineCB" layoutX="74.0" layoutY="108.0" onAction="#airlineOnActionCB" prefHeight="26.0" prefWidth="175.0" promptText="Airline" />
+      <TextField fx:id="passergerCountTF" layoutX="472.0" layoutY="41.0" />
+      <Label layoutX="350.0" layoutY="45.0" text="Passenger count">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="kitchenteamLV" layoutX="74.0" layoutY="179.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="406.0" layoutY="134.0" mnemonicParsing="false" onAction="#generatepreplistAB" prefHeight="50.0" prefWidth="150.0" text="Generate Prep List">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

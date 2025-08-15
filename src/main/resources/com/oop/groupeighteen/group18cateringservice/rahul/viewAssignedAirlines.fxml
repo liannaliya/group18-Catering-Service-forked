@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.rahul.ViewAssignedAirlinescontroller">
+   <children>
+      <TableView fx:id="viewassignairlineTV" layoutX="42.0" layoutY="46.0" prefHeight="279.0" prefWidth="338.0">
+        <columns>
+          <TableColumn fx:id="airlineNameCOL" prefWidth="99.20001220703125" text="Airline Name" />
+          <TableColumn fx:id="contactCOL" prefWidth="112.79998779296875" text="Contact" />
+            <TableColumn fx:id="servicedaysCOL" prefWidth="126.39996337890625" text="Service Days" />
+        </columns>
+      </TableView>
+      <Button layoutX="486.0" layoutY="153.0" mnemonicParsing="false" onAction="#viewScheduleAB" prefHeight="82.0" prefWidth="129.0" text="View Schedule">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
