@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.rahul.TrackMealPreparationcontroller">
+   <children>
+      <TableView fx:id="trackmealTV" layoutX="57.0" layoutY="42.0" prefHeight="244.0" prefWidth="287.0">
+        <columns>
+          <TableColumn fx:id="flightCOL" prefWidth="143.20001220703125" text="Flight" />
+          <TableColumn fx:id="statusCOL" prefWidth="143.20001220703125" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="481.0" layoutY="89.0" mnemonicParsing="false" onAction="#updatstatusAB" prefHeight="58.0" prefWidth="130.0" text="Update Status" />
+      <Button layoutX="481.0" layoutY="200.0" mnemonicParsing="false" onAction="#markcompleteAB" prefHeight="58.0" prefWidth="129.0" text="Mark Complete" />
+   </children>
+</AnchorPane>
