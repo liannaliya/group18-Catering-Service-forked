@@ -7,7 +7,7 @@ public class User {
     private LocalDate dob ,doj;
 
     public User(String name, String phoneNo, String email, String address, String gender, String password, LocalDate dob) {
-        this.id = id;
+
         this.name = name;
         this.phoneNo = phoneNo;
         this.email = email;
@@ -15,7 +15,7 @@ public class User {
         this.gender = gender;
         this.password = password;
         this.dob = dob;
-        this.doj = doj;
+        this.doj = LocalDate.now();
     }
 
     public String getId() {
@@ -92,16 +92,16 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                ", gender='" + gender + '\'' +
-                ", password='" + password + '\'' +
-                ", dob=" + dob +
-                ", doj=" + doj +
+                "name='" + name + '\'' +
+                "phoneNo='" + phoneNo + '\'' +
+                "email='" + email + '\'' +
+                "address='" + address + '\'' +
+                "gender='" + gender + '\'' +
+                "password='" + password + '\'' +
+                "dob=" + dob +
+                "doj=" + doj +
                 '}';
     }
 
