@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="502.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Maliha.VehicleManagercontroller">
+   <children>
+      <TextField fx:id="scheduleIdField" layoutX="127.0" layoutY="45.0" text="1122" />
+      <Label layoutX="41.0" layoutY="49.0" text="Schedule ID" />
+      <Button layoutX="151.0" layoutY="264.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="109.0" prefWidth="140.0" text="Add Vehicle" />
+      <TableView fx:id="vehicletableview" layoutX="302.0" layoutY="45.0" prefHeight="391.0" prefWidth="427.0">
+        <columns>
+          <TableColumn fx:id="idcol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="vehicleCol" prefWidth="80.79998779296875" text="Vehicle" />
+            <TableColumn fx:id="dateCol" prefWidth="98.4000244140625" text="Date" />
+            <TableColumn fx:id="timeCol" prefWidth="83.20001220703125" text="Time" />
+            <TableColumn fx:id="driverCol" prefWidth="89.60003662109375" text="Driver" />
+        </columns>
+      </TableView>
+      <Button layoutX="5.0" layoutY="264.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="109.0" prefWidth="140.0" text="Update Vehicle" />
+      <Label layoutX="41.0" layoutY="81.0" text="Vehicle" />
+      <ComboBox fx:id="vehicleCombo" layoutX="127.0" layoutY="77.0" prefWidth="150.0" />
+      <DatePicker fx:id="date" layoutX="127.0" layoutY="112.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="41.0" layoutY="116.0" text="Schedule Date" />
+      <TextField fx:id="timeField" layoutX="127.0" layoutY="150.0" text="12:56" />
+      <Label layoutX="41.0" layoutY="154.0" text="Schedule Time" />
+      <Label layoutX="41.0" layoutY="188.0" text="Driver" />
+      <ComboBox fx:id="driverCombo" layoutX="127.0" layoutY="184.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

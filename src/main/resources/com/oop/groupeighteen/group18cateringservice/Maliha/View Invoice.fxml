@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="577.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Maliha.ViewInvoiceController">
+   <children>
+      <TableView fx:id="invoiceTable" layoutX="20.0" layoutY="23.0" prefHeight="234.0" prefWidth="747.0">
+        <columns>
+          <TableColumn fx:id="invoiceIdCol" prefWidth="83.20001602172852" text="Invoice No." />
+          <TableColumn fx:id="customerNameCol" prefWidth="148.7999725341797" text="customer name" />
+            <TableColumn fx:id="phoneNumberCol" prefWidth="116.80000305175781" text="Phn number" />
+            <TableColumn fx:id="addcol" prefWidth="209.5999755859375" text="Address" />
+            <TableColumn fx:id="datecol" minWidth="2.4000244140625" prefWidth="80.79998779296875" text="Date" />
+            <TableColumn fx:id="totalPriceCol" minWidth="0.0" prefWidth="105.5999633789063" text="Total price" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="276.0" prefHeight="18.0" prefWidth="90.0" text="Invoice Number" />
+      <Label layoutX="523.0" layoutY="276.0" text="Phone Number" />
+      <Label layoutX="520.0" layoutY="315.0" text="Date" />
+      <Label layoutX="20.0" layoutY="316.0" text="Address" />
+      <Label layoutX="208.0" layoutY="276.0" prefHeight="18.0" prefWidth="90.0" text="Customer Name" />
+      <TableView fx:id="productTable" layoutX="20.0" layoutY="371.0" prefHeight="151.0" prefWidth="747.0">
+         <columns>
+            <TableColumn fx:id="productIdCol" prefWidth="74.39999675750732" text="Product ID" />
+            <TableColumn fx:id="productNamecol" prefWidth="237.59999084472656" text="Product name" />
+            <TableColumn fx:id="qtycol" prefWidth="157.60003662109375" text="Quantity" />
+            <TableColumn fx:id="unitPriceCol" prefWidth="147.99993896484375" text="Unit Price" />
+            <TableColumn fx:id="productTotalPriceCol" prefWidth="128.800048828125" text="Total" />
+         </columns>
+      </TableView>
+      <Label fx:id="invoiceNo" layoutX="118.0" layoutY="276.0" prefHeight="18.0" prefWidth="81.0" />
+      <Label fx:id="customerName" layoutX="298.0" layoutY="276.0" prefHeight="18.0" prefWidth="216.0" />
+      <Label fx:id="phone" layoutX="618.0" layoutY="276.0" prefHeight="18.0" prefWidth="164.0" />
+      <Label fx:id="address" layoutX="65.0" layoutY="315.0" prefHeight="45.0" prefWidth="442.0" />
+      <Label fx:id="Date" layoutX="563.0" layoutY="314.0" prefHeight="18.0" prefWidth="164.0" />
+      <Line endX="645.6000366210938" layoutX="121.0" layoutY="263.0" startX="-100.0" />
+      <Button layoutX="638.0" layoutY="532.0" mnemonicParsing="false" onAction="#gotToAddNewInvoice" prefHeight="38.0" prefWidth="131.0" text="Add new Invoice" />
+   </children>
+</AnchorPane>
