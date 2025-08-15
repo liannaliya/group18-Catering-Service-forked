@@ -6,7 +6,7 @@ public class User {
     private String id, name,phoneNo,email,address,gender,password;
     private LocalDate dob ,doj;
 
-    public User(String id, String name, String phoneNo, String email, String address, String gender, String password, LocalDate dob, LocalDate doj) {
+    public User(String name, String phoneNo, String email, String address, String gender, String password, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.phoneNo = phoneNo;
@@ -103,5 +103,9 @@ public class User {
                 ", dob=" + dob +
                 ", doj=" + doj +
                 '}';
+    }
+
+    public boolean login(String id, String password) {
+        return false;
     }
 }
