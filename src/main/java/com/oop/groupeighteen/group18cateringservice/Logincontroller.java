@@ -118,6 +118,14 @@ public class Logincontroller
     }
 
     @javafx.fxml.FXML
-    public void createaccountButton(ActionEvent actionEvent) {
+    public void createaccountButton(ActionEvent actionEvent) throws IOException {
+        Parent root = null;
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CreateAccountPage.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Catering Manager Dashboard");
+        stage.show();
     }
 }

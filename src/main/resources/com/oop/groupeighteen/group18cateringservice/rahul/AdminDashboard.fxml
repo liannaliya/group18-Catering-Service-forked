@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.rahul.AdminDashboardcontroller">
    <children>
       <Button layoutX="59.0" layoutY="94.0" mnemonicParsing="false" onAction="#userManagementAB" prefHeight="68.0" prefWidth="124.0" text="User Management">
@@ -47,5 +46,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
+      <Button layoutX="705.0" layoutY="394.0" mnemonicParsing="false" onAction="#backAB" text="Back" />
    </children>
 </AnchorPane>
