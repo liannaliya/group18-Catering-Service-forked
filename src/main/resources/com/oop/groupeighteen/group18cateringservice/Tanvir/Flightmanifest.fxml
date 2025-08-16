@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="200.0" layoutY="14.0" prefHeight="49.0" prefWidth="200.0" style="-fx-background-radius: 90;" text="FLIGHT MANIFEST" textAlignment="CENTER">
+               <font>
+                  <Font name="David Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: 50;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="435.0" fitWidth="600.0" layoutX="4.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="60.0" layoutY="80.0" text="CLASS">
+               <font>
+                  <Font name="Cooper Black" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="154.0" text="ENTER YOUR SIT NUMBER">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="225.0" text="DESPRIPTION OF MEAL:">
+               <font>
+                  <Font name="Cooper Black" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ClassCB" layoutX="158.0" layoutY="78.0" prefHeight="25.0" prefWidth="210.0" promptText="DEFINE CLASS" />
+            <TextField fx:id="SitnumberTF" layoutX="302.0" layoutY="151.0" prefHeight="25.0" prefWidth="194.0" promptText="A1,A2,B1,B2........." />
+            <TextArea fx:id="DescriptionofmealTA" layoutX="57.0" layoutY="254.0" prefHeight="162.0" prefWidth="490.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
