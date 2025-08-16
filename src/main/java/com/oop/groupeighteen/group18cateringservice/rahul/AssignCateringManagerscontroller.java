@@ -15,12 +15,13 @@ import java.io.IOException;
 public class AssignCateringManagerscontroller
 {
     @javafx.fxml.FXML
-    private ListView managersLV;
+    private ListView<String> managersLV;
     @javafx.fxml.FXML
-    private ComboBox airlineNameCB;
+    private ComboBox<String> airlineNameCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML
