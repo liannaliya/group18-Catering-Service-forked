@@ -1,14 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oop.groupeighteen.group18cateringservice.Tanvir.QualityControlOfficerController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="112.0" prefWidth="700.0" style="-fx-background-color: #05ffb0;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIcon glyphName="USER" layoutX="24.0" layoutY="77.0" size="5em" />
+            <Label layoutX="78.0" layoutY="40.0" text="QUALITY-CONTROL&#10;OFFICER">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="510.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/switch-user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="switchuserLB" layoutX="578.0" layoutY="46.0" text="SWITCH USER">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="SearchTF" layoutX="251.0" layoutY="34.0" prefHeight="43.0" prefWidth="229.0" promptText="SEARCH" style="-fx-background-radius: #05ffb0;">
+               <font>
+                  <Font name="Bodoni MT" size="18.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="436.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/magnifying-glass.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #05ffb0;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="14.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/log-out.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LogoutLB" layoutX="59.0" layoutY="493.0" text="LOG-OUT">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="57.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/food-safety.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="FoodsafelyLB" layoutX="66.0" layoutY="29.0" text="FOOD SAFETY">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="AllergencontrolLB" layoutX="63.0" layoutY="81.0" text="ALLERGEN &#10;CONTROL">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="AuditLB" layoutX="72.0" layoutY="292.0" text="AUDIT">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="ReportsLB" layoutX="72.0" layoutY="358.0" text="REPORTS">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="InspectionLB" layoutX="66.0" layoutY="156.0" text="INSPECTION">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="QualitycheckLB" layoutX="70.0" layoutY="215.0" text="QUALITY &#10;CHECK">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="48.0" layoutX="9.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/allergen-free.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="51.0" layoutX="9.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/audit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="41.0" layoutX="12.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/report.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="47.0" layoutX="9.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/inspection.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="41.0" layoutX="12.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/quality-control.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="10.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/feedback.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="FeedbackLB" layoutX="72.0" layoutY="418.0" text="FEEDBACK">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
