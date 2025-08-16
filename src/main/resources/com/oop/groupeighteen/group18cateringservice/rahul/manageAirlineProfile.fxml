@@ -8,7 +8,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.rahul.ManageAirlineProfilecontroller">
    <children>
       <TableView fx:id="manageAirlineTV" layoutX="28.0" layoutY="31.0" prefHeight="247.0" prefWidth="375.0">
@@ -27,5 +26,6 @@
       <Button layoutX="441.0" layoutY="278.0" mnemonicParsing="false" onAction="#addAB" text="Add" />
       <Button layoutX="554.0" layoutY="278.0" mnemonicParsing="false" onAction="#editAB" text="Edit" />
       <Button layoutX="663.0" layoutY="278.0" mnemonicParsing="false" onAction="#saveAB" text="Save" />
+      <Button layoutX="689.0" layoutY="375.0" mnemonicParsing="false" onAction="#backAB" text="Back" />
    </children>
 </AnchorPane>

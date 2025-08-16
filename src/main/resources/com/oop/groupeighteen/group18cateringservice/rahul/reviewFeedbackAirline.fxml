@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.rahul.ReviewFeedbackAirlinecontroller">
    <children>
       <TableView fx:id="cmreviwfeedbackTV" layoutX="61.0" layoutY="40.0" prefHeight="306.0" prefWidth="375.0">
@@ -25,5 +24,6 @@
          </font>
       </Label>
       <Button layoutX="541.0" layoutY="225.0" mnemonicParsing="false" onAction="#markSolvedAB" prefHeight="52.0" prefWidth="103.0" text="Mark Resolved" />
+      <Button layoutX="704.0" layoutY="382.0" mnemonicParsing="false" onAction="#backAB" text="Back" />
    </children>
 </AnchorPane>

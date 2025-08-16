@@ -1,13 +1,14 @@
 package com.oop.groupeighteen.group18cateringservice;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-public class User {
+public abstract class User {
     private String id, name,phoneNo,email,address,gender,password;
     private LocalDate dob ,doj;
 
     public User(String name, String phoneNo, String email, String address, String gender, String password, LocalDate dob) {
-
+        this.id=this.genarateID();
         this.name = name;
         this.phoneNo = phoneNo;
         this.email = email;
@@ -106,6 +107,11 @@ public class User {
     }
 
     public boolean login(String id, String password) {
+        if (Objects.equals(id,this.getId()) && Objects.equals(password, this.getPassword())){
+
+            return true;
+        }
         return false;
     }
+    public abstract String genarateID();
 }
