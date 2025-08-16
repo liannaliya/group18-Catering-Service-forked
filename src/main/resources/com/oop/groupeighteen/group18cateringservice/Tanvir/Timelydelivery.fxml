@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="91.0" prefWidth="600.0" style="-fx-background-color: #053307;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="89.0" fitWidth="85.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/fast-delivery(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="113.0" layoutY="31.0" text="TIMELY DELIVERY" textFill="WHITE">
+               <font>
+                  <Font name="Cooper Black" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="457.0" prefWidth="613.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="612.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/BackGround%20Image.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="4.0" layoutY="398.0" prefHeight="86.0" prefWidth="609.0" style="-fx-background-color: #053307;">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="72.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/home.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="89.0" layoutY="31.0" text="BACK TO HOME" textFill="#f0efef">
+                     <font>
+                        <Font name="Cooper Black" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="350.0" fitWidth="440.0" layoutX="184.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/fast-delivery.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="110.0" layoutY="40.0" text="PLEASE BE&#10;PATIENT AND&#10;REMAIN ON YOUR&#10;YOUR ATTENDENT&#10;WILL REACH YOU &#10;SHORTLY WITH&#10;YOUR FOOD." textFill="WHITE">
+               <font>
+                  <Font name="Cooper Black" size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
