@@ -1,15 +1,15 @@
 package com.oop.groupeighteen.group18cateringservice.rahul;
 
 import com.oop.groupeighteen.group18cateringservice.HelloApplication;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,11 +17,11 @@ import java.io.IOException;
 public class ManageAirlineProfilecontroller
 {
     @javafx.fxml.FXML
-    private TableColumn airlineNameCOL;
+    private TableColumn<Airline,String> airlineNameCOL;
     @javafx.fxml.FXML
-    private TableView manageAirlineTV;
+    private TableView <Airline> manageAirlineTV;
     @javafx.fxml.FXML
-    private TableColumn contactCOL;
+    private TableColumn <Airline,String> contactCOL;
     @javafx.fxml.FXML
     private TextField airlineNameTF;
     @javafx.fxml.FXML
@@ -29,10 +29,17 @@ public class ManageAirlineProfilecontroller
     @javafx.fxml.FXML
     private TextField contactTF;
     @javafx.fxml.FXML
-    private TableColumn contactTermsCOL;
+    private TableColumn <Airline,String> contactTermsCOL;
+
+    private ObservableList<Airline> airlines = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
+        airlineNameCOL.setCellValueFactory(new PropertyValueFactory<>("name"));
+        contactCOL.setCellValueFactory(new PropertyValueFactory<>("contact"));
+        contactTermsCOL.setCellValueFactory(new PropertyValueFactory<>("terms"));
+
+
     }
 
     @javafx.fxml.FXML
@@ -41,10 +48,25 @@ public class ManageAirlineProfilecontroller
 
     @javafx.fxml.FXML
     public void editAB(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
     public void addAB(ActionEvent actionEvent) {
+        if (airlineNameTF.getText().isEmpty() || contactTF.getText().isEmpty()) {
+            showAlert("Error", "Name and contact are required");
+            return;
+        }
+
+
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     @javafx.fxml.FXML
