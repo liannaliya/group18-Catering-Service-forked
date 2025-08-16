@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,7 +12,6 @@
    <top>
       <AnchorPane prefHeight="77.0" prefWidth="700.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
          <children>
-            <FontAwesomeIcon fill="#e9e9e9" glyphName="USER" layoutX="31.0" layoutY="75.0" size="5em" />
             <Label layoutX="109.0" layoutY="23.0" prefHeight="57.0" prefWidth="285.0" text="AIR REPRESENTATIVE" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="28.0" />
@@ -35,12 +33,6 @@
    <left>
       <AnchorPane prefHeight="497.0" prefWidth="235.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="FlightmanifestLB" layoutX="59.0" layoutY="44.0" text="FLIGHT MANIFEST">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <FontAwesomeIcon glyphName="CHECK" layoutX="10.0" layoutY="130.0" size="3em" text="" />
             <Label fx:id="VerifytimelydeliveryLB" layoutX="59.0" layoutY="107.0" text="VERIFY TIMELY DELIVERY">
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -66,7 +58,6 @@
                   <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/packing.png" />
                </image>
             </ImageView>
-            <FontAwesomeIcon glyphName="PLANE" layoutX="14.0" layoutY="68.0" size="3em" />
             <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="16.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../java/com/oop/groupeighteen/group18cateringservice/image/log-out.png" />

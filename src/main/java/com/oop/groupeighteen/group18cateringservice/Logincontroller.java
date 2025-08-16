@@ -82,6 +82,24 @@ public class Logincontroller {
             stage.setScene(scene);
             stage.show();
         }
+        else if (username.equals("Quality Controller") && password.equals("Tanvir")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Tanvir/QualityControlOfficerDashboard.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Quality Controller Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (username.equals("Airline Representative") && password.equals("Tanvir")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Tanvir/AirlineRepresentativeDashboard.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Airline Representative Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
         else {
             errorlabel.setText("Invalid Username or Password. Please try again.");
         }
