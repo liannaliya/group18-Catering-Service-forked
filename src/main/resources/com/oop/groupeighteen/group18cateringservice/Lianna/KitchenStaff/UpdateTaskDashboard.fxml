@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Lianna.KitchenStaffUpdateTaskController">
+   <children>
+      <Label layoutX="300.0" layoutY="20.0" text="Communicate with Head Chef">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      
+      <Label fx:id="totalTasksLabel" layoutX="50.0" layoutY="60.0" text="Total Tasks: 0" />
+      <Label fx:id="delayedTasksLabel" layoutX="150.0" layoutY="60.0" text="Delayed: 0" />
+      <Label fx:id="completedTasksLabel" layoutX="250.0" layoutY="60.0" text="Completed: 0" />
+      
+      <Label layoutX="50.0" layoutY="90.0" text="Assigned Tasks:" />
+      <TableView fx:id="progressmealpreogtableview" layoutX="50.0" layoutY="110.0" prefHeight="200.0" prefWidth="400.0">
+        <columns>
+          <TableColumn fx:id="tasknamemealprogpcol" prefWidth="150.0" text="Task Name" />
+          <TableColumn fx:id="statusprogcol" prefWidth="120.0" text="Status" />
+          <TableColumn fx:id="notesprogcol" prefWidth="130.0" text="Notes" />
+        </columns>
+      </TableView>
+      
+      <Label layoutX="50.0" layoutY="330.0" text="Communication Type:" />
+      <ComboBox fx:id="communicationTypeComboBox" layoutX="180.0" layoutY="325.0" prefWidth="200.0" />
+      
+      <Button layoutX="50.0" layoutY="370.0" onAction="#reportDelayButton" text="Report Delay" />
+      <Button layoutX="150.0" layoutY="370.0" onAction="#reportProblemButton" text="Report Problem" />
+      <Button layoutX="250.0" layoutY="370.0" onAction="#requestClarificationButton" text="Request Clarification" />
+      <Button layoutX="350.0" layoutY="370.0" onAction="#requestInstructionsButton" text="Request Instructions" />
+      
+      <Button layoutX="50.0" layoutY="410.0" onAction="#confirmUnderstandingButton" text="Confirm Understanding" />
+      <Button layoutX="180.0" layoutY="410.0" onAction="#viewHeadChefInstructionsButton" text="View Instructions" />
+      <Button layoutX="320.0" layoutY="410.0" onAction="#submitprogbutton" text="Submit Progress" />
+      <Button layoutX="450.0" layoutY="410.0" onAction="#backfrommealprogbutton" text="Back" />
+      
+      <Label layoutX="500.0" layoutY="90.0" text="Task Details and Communication:" />
+      <TextArea fx:id="communicationTextArea" layoutX="500.0" layoutY="110.0" prefHeight="200.0" prefWidth="350.0" editable="false" />
+      
+      <Label layoutX="500.0" layoutY="330.0" text="Head Chef Instructions:" />
+      <TextArea fx:id="headChefInstructionsTextArea" layoutX="500.0" layoutY="350.0" prefHeight="200.0" prefWidth="350.0" editable="false" />
+   </children>
+</AnchorPane>

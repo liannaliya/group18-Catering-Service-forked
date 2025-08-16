@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Lianna.KitchenStaffDashboardcontroller">
+   <children>
+      <Label layoutX="183.0" layoutY="14.0" text="Kitchen Staff Dashboard">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="90.0" layoutY="64.0" mnemonicParsing="false" onAction="#viewassignedtaskstaffbutton" text="View Assigned Task" />
+      <Button layoutX="90.0" layoutY="148.0" mnemonicParsing="false" onAction="#startmealprepstaffbutton" text="Start Meal Preparation" />
+      <Button layoutX="92.0" layoutY="233.0" mnemonicParsing="false" onAction="#updatetaskstaffbutton" text="Update Task Progress" />
+      <Button layoutX="358.0" layoutY="233.0" mnemonicParsing="false" onAction="#logingredientstaffbutton" text="Log Ingredient Usage" />
+      <Button layoutX="385.0" layoutY="64.0" mnemonicParsing="false" onAction="#reportissuesstaffbutton" text="Report Equipment Issues" />
+      <Button layoutX="382.0" layoutY="148.0" mnemonicParsing="false" onAction="#updatemealstaffbutton" text="Update Flight Meal Status" />
+      <Button layoutX="88.0" layoutY="323.0" mnemonicParsing="false" onAction="#qualitycheckstaffbutton" text="Mark Quality Check Completion" />
+      <Button layoutX="334.0" layoutY="323.0" mnemonicParsing="false" onAction="#acknowledgestaffbutton" text="Acknowledge Performance Review" />
+      <Button layoutX="493.0" layoutY="32.0" mnemonicParsing="false" onAction="#logoutbutton" prefHeight="25.0" prefWidth="85.0" text="Log Out" />
+   </children>
+</AnchorPane>

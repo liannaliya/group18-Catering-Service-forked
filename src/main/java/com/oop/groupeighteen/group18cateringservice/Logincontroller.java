@@ -1,131 +1,98 @@
 package com.oop.groupeighteen.group18cateringservice;
 
-import com.oop.groupeighteen.group18cateringservice.rahul.Admin;
-import com.oop.groupeighteen.group18cateringservice.rahul.Cateringmanager;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Logincontroller
-{
-    @javafx.fxml.FXML
-    private PasswordField passwordfield;
-    @javafx.fxml.FXML
-    private Label errorlabel;
-    @javafx.fxml.FXML
+public class Logincontroller {
+
+    @FXML
     private TextField useridtf;
-    Alert alert;
-    ArrayList<Admin> adminArrayList = new ArrayList<>();
-    ArrayList<Cateringmanager> cateringmanagerArrayList = new ArrayList<>();
+    
+    @FXML
+    private PasswordField passwordfield;
+    
+    @FXML
+    private Label errorlabel;
 
-    @javafx.fxml.FXML
-    public void initialize() {
-        Admin admin = new Admin("Admin", "0163678945", "abc@gmail.com", "Dhaka", "Male", "1234", LocalDate.of(1995, 3, 10)) {
-            @Override
-            public String genarateID() {
-                return "a";
-            }
-        };
-        adminArrayList.add(admin);
-
-        Cateringmanager cateringmanager = new Cateringmanager("Catering Manager", "0163670945", "abcd@gmail.com", "Dhaka", "Male", "12345", LocalDate.of(1995, 3, 10)) {
-            @Override
-            public String genarateID() {
-                return "cm";
-            }
-        };
-        cateringmanagerArrayList.add(cateringmanager);
-    }
-
-
-    @javafx.fxml.FXML
+    @FXML
     public void loginButton(ActionEvent actionEvent) throws IOException {
-        System.out.println("Login Page");
-        String id , password;
-        boolean flag = true;
+        String username = useridtf.getText();
+        String password = passwordfield.getText();
 
-        Alert erroralert= new Alert(Alert.AlertType.ERROR);
-
-        id = useridtf.getText();
-        password = passwordfield.getText();
-
-        if (id.isBlank()){
-            flag = false;
-            erroralert.setTitle("User ID ERROR");
-            erroralert.setTitle("User ID can not be blank");
-            erroralert.showAndWait();
+        if (username.equals("Head Chef") && password.equals("Liya")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Lianna/HeadChef/HeadChefDashboard.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Head Chef Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
-
-        if (password.isBlank()){
-            flag = false;
-            erroralert.setTitle("Password ID ERROR");
-            erroralert.setTitle("Password can not be blank");
-            erroralert.showAndWait();
+        else if (username.equals("Kitchen Staff") && password.equals("Liya")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Lianna/KitchenStaff/KitchenStaffDashboard.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Kitchen Staff Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
-
-        if (flag) {
-            if (id.length() == 1) {
-                for (Admin admin : adminArrayList) {
-                    if (admin.login(id, password)) {
-                        Parent root = null ;
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rahul/AdminDashboard.fxml"));
-                        root = fxmlLoader.load();
-                        Scene scene = new Scene(root) ;
-                        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-                        stage.setScene(scene);
-                        stage.setTitle("Admin Dashboard");
-                        stage.show();
-
-
-                    }
-                }
-                //login as a admin
-
-            } else if (id.length() == 2) {
-                for (Cateringmanager cateringmanager : cateringmanagerArrayList) {
-                    if (cateringmanager.login(id, password)) {
-                        Parent root = null;
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rahul/CateringManagerDashboard.fxml"));
-                        root = fxmlLoader.load();
-                        Scene scene = new Scene(root);
-                        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                        stage.setScene(scene);
-                        stage.setTitle("Catering Manager Dashboard");
-                        stage.show();
-                    }
-                }
-                //login as a Catering Manager
-
-            } else {
-                erroralert.setTitle("User ID ERROR");
-                erroralert.setTitle("User ID Does not exit");
-                erroralert.showAndWait();
-            }
+        else if (username.equals("Admin") && password.equals("Rahul")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rahul/AdminDashboard.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Admin Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
-
-
+        else if (username.equals("Catering Manager") && password.equals("Rahul")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rahul/CateringManagerDashboard.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Catering Manager Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (username.equals("Finance Officer") && password.equals("Maliha")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Maliha/Add Invoice.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Finance Officer Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (username.equals("Vehicle Manager") && password.equals("Maliha")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Maliha/VehicleManager.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) useridtf.getScene().getWindow();
+            stage.setTitle("Vehicle Manager Dashboard");
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else {
+            errorlabel.setText("Invalid Username or Password. Please try again.");
+        }
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void createaccountButton(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CreateAccountPage.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Catering Manager Dashboard");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CreateAccountPage.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) useridtf.getScene().getWindow();
+        stage.setScene(new Scene(root));
         stage.show();
     }
 }

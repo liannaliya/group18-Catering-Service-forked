@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Separator?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Lianna.AssignedTasksDashboardcontroller">
+   <children>
+      <Label layoutX="350.0" layoutY="20.0" text="Assigned Tasks Dashboard">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="50.0" layoutY="70.0" text="Staff Assignment Management">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="50.0" layoutY="110.0" text="Staff Name" />
+      <TextField fx:id="staffNameField" layoutX="150.0" layoutY="100.0" prefWidth="150.0" />
+      
+      <Label layoutX="50.0" layoutY="150.0" text="Task Type" />
+      <ComboBox fx:id="taskTypeComboBox" layoutX="150.0" layoutY="140.0" prefWidth="150.0" />
+      
+      <Label layoutX="50.0" layoutY="190.0" text="Flight Number" />
+      <TextField fx:id="flightNumberField" layoutX="150.0" layoutY="180.0" prefWidth="150.0" />
+      
+      <Label layoutX="50.0" layoutY="230.0" text="Due Date" />
+      <DatePicker fx:id="dueDatePicker" layoutX="150.0" layoutY="220.0" prefWidth="150.0" />
+      
+      <Label layoutX="50.0" layoutY="270.0" text="Workload (Hours)" />
+      <Spinner fx:id="workloadSpinner" layoutX="150.0" layoutY="260.0" prefWidth="150.0" />
+      
+      <Label layoutX="50.0" layoutY="310.0" text="Notes" />
+      <TextArea fx:id="notesTextArea" layoutX="150.0" layoutY="300.0" prefWidth="200.0" prefHeight="60.0" />
+      
+      <Button layoutX="400.0" layoutY="100.0" mnemonicParsing="false" onAction="#assignTaskButton" text="Assign Task" prefWidth="100.0" />
+      <Button layoutX="400.0" layoutY="140.0" mnemonicParsing="false" onAction="#viewStaffAssignmentsButton" text="View Assignments" prefWidth="100.0" />
+      <Button layoutX="400.0" layoutY="180.0" mnemonicParsing="false" onAction="#verifyWorkloadButton" text="Verify Workload" prefWidth="100.0" />
+      <Button layoutX="400.0" layoutY="220.0" mnemonicParsing="false" onAction="#saveAssignmentPlanButton" text="Save Plan" prefWidth="100.0" />
+      
+      <Separator layoutX="50.0" layoutY="380.0" prefWidth="800.0" />
+      
+      <Label layoutX="50.0" layoutY="410.0" text="Current Staff Assignments">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      
+      <TableView fx:id="assignmenttable" layoutX="50.0" layoutY="440.0" prefHeight="200.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="staffnameassignedtaskscol" prefWidth="120.0" text="Staff Name" />
+          <TableColumn fx:id="taskassignedcol" prefWidth="120.0" text="Task Type" />
+          <TableColumn fx:id="flightNumberCol" prefWidth="100.0" text="Flight No" />
+          <TableColumn fx:id="dueDateCol" prefWidth="120.0" text="Due Date" />
+          <TableColumn fx:id="statusCol" prefWidth="100.0" text="Status" />
+          <TableColumn fx:id="workloadCol" prefWidth="80.0" text="Workload" />
+          <TableColumn fx:id="assignedByCol" prefWidth="120.0" text="Assigned By" />
+        </columns>
+      </TableView>
+      
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#backfromassignedtaskbutton" text="Back" prefWidth="80.0" />
+   </children>
+</AnchorPane>

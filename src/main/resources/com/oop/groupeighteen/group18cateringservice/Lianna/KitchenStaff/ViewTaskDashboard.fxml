@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Lianna.KitchenStaffViewTaskController">
+   <children>
+      <Label layoutX="250.0" layoutY="20.0" text="View Assigned Tasks">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="50.0" layoutY="60.0" text="Filter by Status:" />
+      <ComboBox fx:id="filterStatusComboBox" layoutX="150.0" layoutY="55.0" prefWidth="120.0" />
+      
+      <Label layoutX="300.0" layoutY="60.0" text="Filter by Priority:" />
+      <ComboBox fx:id="filterPriorityComboBox" layoutX="400.0" layoutY="55.0" prefWidth="120.0" />
+      
+      <Button layoutX="550.0" layoutY="55.0" onAction="#clearFiltersButton" text="Clear Filters" />
+      <Button layoutX="650.0" layoutY="55.0" onAction="#showUrgentTasksButton" text="Urgent Tasks" />
+      
+      <Label fx:id="totalTasksLabel" layoutX="50.0" layoutY="90.0" text="Total Tasks: 0" />
+      <Label fx:id="pendingTasksLabel" layoutX="150.0" layoutY="90.0" text="Pending: 0" />
+      <Label fx:id="acknowledgedTasksLabel" layoutX="250.0" layoutY="90.0" text="Acknowledged: 0" />
+      <Label fx:id="completedTasksLabel" layoutX="350.0" layoutY="90.0" text="Completed: 0" />
+      
+      <Label layoutX="50.0" layoutY="120.0" text="Assigned Tasks:" />
+      <TableView fx:id="assignedTasksTable" layoutX="50.0" layoutY="140.0" prefHeight="200.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="taskIdCol" text="Task ID" prefWidth="80.0" />
+            <TableColumn fx:id="staffNameCol" text="Staff Name" prefWidth="100.0" />
+            <TableColumn fx:id="taskTypeCol" text="Task Type" prefWidth="120.0" />
+            <TableColumn fx:id="flightNumberCol" text="Flight" prefWidth="80.0" />
+            <TableColumn fx:id="dueDateCol" text="Due Date" prefWidth="120.0" />
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="80.0" />
+            <TableColumn fx:id="workloadCol" text="Workload" prefWidth="70.0" />
+            <TableColumn fx:id="assignedByCol" text="Assigned By" prefWidth="100.0" />
+         </columns>
+      </TableView>
+      
+      <Label layoutX="50.0" layoutY="360.0" text="Task Details:" />
+      <TextArea fx:id="taskDetailsTextArea" layoutX="50.0" layoutY="380.0" prefHeight="150.0" prefWidth="700.0" editable="false" />
+      
+      <CheckBox fx:id="acknowledgedCheckBox" layoutX="50.0" layoutY="550.0" text="Task Acknowledged" />
+      <Button layoutX="200.0" layoutY="545.0" onAction="#acknowledgeTaskButton" text="Acknowledge Task" />
+      <Button layoutX="350.0" layoutY="545.0" onAction="#refreshTasksButton" text="Refresh Tasks" />
+      <Button layoutX="500.0" layoutY="545.0" onAction="#backToDashboardButton" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

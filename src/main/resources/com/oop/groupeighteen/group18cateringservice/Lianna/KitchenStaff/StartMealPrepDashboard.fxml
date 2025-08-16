@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Lianna.KitchenStaffStartMealPrepController">
+   <children>
+      <Label layoutX="250.0" layoutY="20.0" text="Start Meal Preparation Dashboard">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      
+      <Button layoutX="50.0" layoutY="60.0" onAction="#starttaskbutton" text="Start Task" />
+      <Button layoutX="150.0" layoutY="60.0" onAction="#MarkReadyButton" text="Mark Ready" />
+      <Button layoutX="250.0" layoutY="60.0" onAction="#uploadstatusbutton" text="Upload Notes" />
+      <Button layoutX="350.0" layoutY="60.0" onAction="#confirmschedulebutton" text="Confirm Schedule" />
+      <Button layoutX="450.0" layoutY="60.0" onAction="#dispatchplanprembutton" text="View Dispatch Plan" />
+      <Button layoutX="550.0" layoutY="60.0" onAction="#backfrommealprembutton" text="Back" />
+      
+      <Label layoutX="50.0" layoutY="100.0" text="Assigned Tasks:" />
+      <TableView fx:id="preptableview" layoutX="50.0" layoutY="120.0" prefHeight="400.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="taskprepcol" prefWidth="200.0" text="Task Name" />
+          <TableColumn fx:id="Notespeprepcol" prefWidth="250.0" text="Notes" />
+          <TableColumn fx:id="statuspremcol" prefWidth="150.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

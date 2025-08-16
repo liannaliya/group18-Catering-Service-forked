@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.groupeighteen.group18cateringservice.Lianna.HeadChefDashboardcontroller">
+   <children>
+      <Button layoutX="76.0" layoutY="90.0" mnemonicParsing="false" onAction="#menuplanbutton" prefHeight="25.0" prefWidth="141.0" text="Menu Plan" />
+      <Button layoutX="385.0" layoutY="90.0" mnemonicParsing="false" onAction="#flightupdatebutton" prefHeight="25.0" prefWidth="141.0" text="Flight Update" />
+      <Button layoutX="76.0" layoutY="153.0" mnemonicParsing="false" onAction="#assignedtaskbutton" prefHeight="25.0" prefWidth="141.0" text="Assigned Task" />
+      <Button layoutX="385.0" layoutY="225.0" mnemonicParsing="false" onAction="#qualitycheckbutton" prefHeight="25.0" prefWidth="141.0" text="Quality Check" />
+      <Button layoutX="76.0" layoutY="225.0" mnemonicParsing="false" onAction="#kitchenprogressbutton" prefHeight="25.0" prefWidth="141.0" text="Kitchen Progress" />
+      <Button layoutX="76.0" layoutY="301.0" mnemonicParsing="false" onAction="#ingredientsinventorbutton" prefHeight="25.0" prefWidth="141.0" text=" Ingredients Inventor" />
+      <Button layoutX="385.0" layoutY="153.0" mnemonicParsing="false" onAction="#specialmealbutton" prefHeight="25.0" prefWidth="141.0" text="Special Meal" />
+      <Button layoutX="385.0" layoutY="301.0" mnemonicParsing="false" onAction="#reviewperformancebutton" prefHeight="25.0" prefWidth="141.0" text="Review Performance " />
+      <Label contentDisplay="BOTTOM" layoutX="202.0" layoutY="14.0" prefHeight="61.0" prefWidth="221.0" text="Head Chef DashBoared ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="493.0" layoutY="32.0" mnemonicParsing="false" onAction="#logoutbutton" prefHeight="25.0" prefWidth="85.0" text="Log Out" />
+   </children>
+</AnchorPane>
